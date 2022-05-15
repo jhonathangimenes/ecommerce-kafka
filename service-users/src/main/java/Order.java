@@ -4,11 +4,13 @@ public class Order {
     private String userId;
     private String orderId;
     private BigDecimal amount;
+    private String email;
 
-    public Order(String userId, String orderId, BigDecimal amount) {
+    public Order(String userId, String orderId, BigDecimal amount ,String email) {
         this.userId = userId;
         this.orderId = orderId;
         this.amount = amount;
+        this.email = email;
     }
 
     public String getUserId() {
@@ -26,5 +28,9 @@ public class Order {
                 ", orderId='" + orderId + '\'' +
                 ", amount=" + amount +
                 '}';
+    }
+
+    public String getEmail() {
+        return email;
     }
 }
